@@ -1,6 +1,7 @@
 import click
 import pandas as pd
 import numpy as np
+from apriori import apriori
 
 @click.group()
 def root():
@@ -17,6 +18,7 @@ def hello(count, surname,midname, name):
     click.echo(df.to_string(index=False))
 
 root.add_command(hello)
+root.add_command(apriori)
 
 if __name__ == "__main__":
     root()
