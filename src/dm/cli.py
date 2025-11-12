@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from apriori import apriori
 from preprocess import preprocess
+from kmeans import kmeans
 
 @click.group()
 def root():
@@ -21,6 +22,7 @@ def hello(count, surname,midname, name):
 root.add_command(hello)
 root.add_command(apriori)
 root.add_command(preprocess)
+root.add_command(kmeans)
 
 if __name__ == "__main__":
     root()
