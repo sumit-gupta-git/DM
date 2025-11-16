@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score, classification_report
 @click.option("--model", type=click.Choice(["auto","gaussian","multinomial","bernoulli"], case_sensitive=False),
               default="auto", help="Naive Bayes model type (default: auto chooses best by accuracy).")
 @click.option("--test_size", default=0.2, help="Proportion of data for testing.")
-def naive_bayes(filepath, target, model, test_size):
+def naivebayes(filepath, target, model, test_size):
     """Smart Naive Bayes classifier with auto model selection."""
     if not os.path.exists(filepath):
         click.echo(f" File not found: {filepath}")
@@ -80,4 +80,4 @@ def naive_bayes(filepath, target, model, test_size):
     click.echo(classification_report(y_test, y_pred, zero_division=0))
 
 if __name__ == "__main__":
-    naive_bayes()
+    naivebayes()

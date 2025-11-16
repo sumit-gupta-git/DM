@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 @click.option("--max_depth", default=None, type=int, help="Maximum depth of the tree (default: None).")
 @click.option("--test_size", default=0.2, help="Proportion of data for testing.")
 @click.option("--save_img", is_flag=True, help="Save decision tree image in /data directory.")
-def decision_tree(filepath, target, criterion, max_depth, test_size, save_img):
+def dtree(filepath, target, criterion, max_depth, test_size, save_img):
     """Smart Decision Tree Classifier with auto criterion selection and optional image saving."""
 
     # --- Load and path validation ---
@@ -100,4 +100,4 @@ def decision_tree(filepath, target, criterion, max_depth, test_size, save_img):
     plt.close()
 
 if __name__ == "__main__":
-    decision_tree()
+    dtree()
